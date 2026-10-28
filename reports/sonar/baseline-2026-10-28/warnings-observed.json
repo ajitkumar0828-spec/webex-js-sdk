@@ -1,0 +1,1 @@
+{"source":"SonarCloud SDK dashboard warning dialog before scope change","analysisId":"cb37a316-e19d-4c0e-ade2-17503166b287","warningCount":4,"warnings":["Python version unspecified (defaults to compatible versions)","Source file encoding problems","Referenced/extended TypeScript configuration not resolved","Architecture analysis errors; results may be incomplete or invalid"]}
