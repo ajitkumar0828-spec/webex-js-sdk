@@ -42,4 +42,12 @@ const jestConfig = {
   ],
 };
 
-export default {...config, ...jestConfig};
+// Keep normal unit-test behavior and the existing 85% thresholds unchanged.
+// The manual Sonar workflow additionally instruments untested production files.
+const sonarCoverage = process.env.SONAR_COVERAGE === 'true' ? {
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+  coverageDirectory: '../../../coverage/sonar/contact-center',
+  maxWorkers: 2,
+} : {};
+
+export default {...config, ...jestConfig, ...sonarCoverage};
