@@ -1,8 +1,8 @@
-name: Build
+name: ajit-build
 on:
   push:
     branches:
-      - master
+      - next
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
